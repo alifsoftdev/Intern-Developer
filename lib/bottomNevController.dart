@@ -6,6 +6,7 @@ import 'package:intern_developer/BottomNavController/search.dart';
 import 'package:intern_developer/BottomNavController/setting.dart';
 import 'package:intern_developer/const/appColor.dart';
 
+
 class BottomNavController extends StatefulWidget {
   @override
   State<BottomNavController> createState() => _BottomNavControllerState();
@@ -13,7 +14,6 @@ class BottomNavController extends StatefulWidget {
 
 class _BottomNavControllerState extends State<BottomNavController> {
   int _currentIndex = 0;
-
 
   final _pages = [
     Home_Screen(),
@@ -26,15 +26,18 @@ class _BottomNavControllerState extends State<BottomNavController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.bgColor,
       bottomNavigationBar: ClipRRect(
+        
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(18.0),
-          topRight: Radius.circular(18.0),
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor: Color(0xffffffff),
-          elevation: 5,
+          backgroundColor:
+          Color(0xffffffff),
+          elevation: 10,
           currentIndex: _currentIndex,
           onTap: (int index) {
             setState(() {
@@ -51,8 +54,8 @@ class _BottomNavControllerState extends State<BottomNavController> {
           items: [
             BottomNavigationBarItem(
               icon: _currentIndex == 0
-                    ? Image.asset("assets/icons/Homeselect.png")
-                    : Image.asset("assets/icons/Home.png"),
+                  ? Image.asset("assets/icons/Homeselect.png")
+                  : Image.asset("assets/icons/Home.png"),
               label: "Home",
             ),
             BottomNavigationBarItem(
@@ -72,8 +75,8 @@ class _BottomNavControllerState extends State<BottomNavController> {
                 label: "Saved"),
             BottomNavigationBarItem(
               icon: _currentIndex == 4
-                    ? Image.asset("assets/icons/Settingselect.png")
-                    : Image.asset("assets/icons/Setting.png"),
+                  ? Image.asset("assets/icons/Settingselect.png")
+                  : Image.asset("assets/icons/Setting.png"),
               label: "Setting",
             ),
           ],

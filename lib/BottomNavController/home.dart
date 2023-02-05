@@ -21,7 +21,7 @@ class Home_Screen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(20),
-                        bottomRight: Radius.circular(20)),
+                        bottomRight: Radius.circular(20)), 
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment(1.5, 2),
@@ -250,55 +250,55 @@ class Home_Screen extends StatelessWidget {
                     children: [
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                       SizedBox(
-                        width: 10,
+                        height: 10,
                       ),
                       allTask(() {}),
                     ],
@@ -318,7 +318,8 @@ class Home_Screen extends StatelessWidget {
         height: 91,
         width: 139,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: AppColor.white),
+            borderRadius: BorderRadius.circular(10),
+             color: AppColor.white),
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Column(
@@ -430,7 +431,11 @@ class Home_Screen extends StatelessWidget {
   Widget allTask(onclick) {
     return InkWell(
       onTap: onclick,
-      child: Card(
+      child: Container(
+        height: 62,
+        decoration: BoxDecoration(
+          color: AppColor.white,
+          borderRadius: BorderRadius.circular(10)),
           child: Padding(
         padding: EdgeInsets.all(15),
         child: Row(
