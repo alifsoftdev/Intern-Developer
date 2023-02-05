@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intern_developer/const/appColor.dart';
 
 class Record_Screen extends StatelessWidget {
   const Record_Screen({super.key});
@@ -6,7 +7,7 @@ class Record_Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.amber[200],
+      backgroundColor: AppColor.bgColor,
     );
   }
 }

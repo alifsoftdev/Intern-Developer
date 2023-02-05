@@ -21,7 +21,7 @@ class Home_Screen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(20),
-                        bottomRight: Radius.circular(20)), 
+                        bottomRight: Radius.circular(20)),
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment(1.5, 2),
@@ -63,10 +63,14 @@ class Home_Screen extends StatelessWidget {
                               height: 40,
                               width: 40,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(40),
-                                border: Border.all(color: Color(0xff24966D),width: 2,style: BorderStyle.solid),
-                                image: DecorationImage(image: AssetImage('assets/profileimg/profile.jpg'))
-                              ),
+                                  borderRadius: BorderRadius.circular(40),
+                                  border: Border.all(
+                                      color: Color(0xff24966D),
+                                      width: 2,
+                                      style: BorderStyle.solid),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/profileimg/profile.jpg'))),
                             ),
                           ],
                         ),
@@ -318,8 +322,7 @@ class Home_Screen extends StatelessWidget {
         height: 91,
         width: 139,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-             color: AppColor.white),
+            borderRadius: BorderRadius.circular(10), color: AppColor.white),
         child: Padding(
           padding: EdgeInsets.all(8.0),
           child: Column(
@@ -432,42 +435,41 @@ class Home_Screen extends StatelessWidget {
     return InkWell(
       onTap: onclick,
       child: Container(
-        height: 62,
-        decoration: BoxDecoration(
-          color: AppColor.white,
-          borderRadius: BorderRadius.circular(10)),
+          height: 62,
+          decoration: BoxDecoration(
+              color: AppColor.white, borderRadius: BorderRadius.circular(10)),
           child: Padding(
-        padding: EdgeInsets.all(15),
-        child: Row(
-          children: [
-            Image.asset(
-              'assets/sticker/to_do_list.png',
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            padding: EdgeInsets.all(15),
+            child: Row(
               children: [
-                Text(
-                  'Online Class Routine',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 12,
-                      color: Color(0xff042E2B)),
+                Image.asset(
+                  'assets/sticker/to_do_list.png',
                 ),
-                Text(
-                  'Save Date: 10/12/2022',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 10,
-                      color: Colors.grey),
+                SizedBox(
+                  width: 10,
                 ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Online Class Routine',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12,
+                          color: Color(0xff042E2B)),
+                    ),
+                    Text(
+                      'Save Date: 10/12/2022',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 10,
+                          color: Colors.grey),
+                    ),
+                  ],
+                )
               ],
-            )
-          ],
-        ),
-      )),
+            ),
+          )),
     );
   }
 }

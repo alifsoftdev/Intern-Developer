@@ -6,7 +6,6 @@ import 'package:intern_developer/BottomNavController/search.dart';
 import 'package:intern_developer/BottomNavController/setting.dart';
 import 'package:intern_developer/const/appColor.dart';
 
-
 class BottomNavController extends StatefulWidget {
   @override
   State<BottomNavController> createState() => _BottomNavControllerState();
@@ -28,15 +27,13 @@ class _BottomNavControllerState extends State<BottomNavController> {
     return Scaffold(
       backgroundColor: AppColor.bgColor,
       bottomNavigationBar: ClipRRect(
-        
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-          backgroundColor:
-          Color(0xffffffff),
+          backgroundColor: Color(0xffffffff),
           elevation: 10,
           currentIndex: _currentIndex,
           onTap: (int index) {
