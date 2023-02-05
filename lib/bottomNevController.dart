@@ -14,6 +14,7 @@ class BottomNavController extends StatefulWidget {
 class _BottomNavControllerState extends State<BottomNavController> {
   int _currentIndex = 0;
 
+
   final _pages = [
     Home_Screen(),
     Search_Screen(),
@@ -25,53 +26,58 @@ class _BottomNavControllerState extends State<BottomNavController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        
-        elevation: 20,
-        currentIndex: _currentIndex,
-        onTap: (int index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
-       selectedItemColor: AppColor.darkGreen,
-        unselectedItemColor: Color(0xFF939696),
-        showUnselectedLabels: true,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              size: 30,
-            ),
-            label: "Home",
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(18.0),
+          topRight: Radius.circular(18.0),
+        ),
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Color(0xffffffff),
+          elevation: 5,
+          currentIndex: _currentIndex,
+          onTap: (int index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          selectedLabelStyle: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 12,
           ),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.search,
-                size: 30,
-              ),
-              label: "Search"),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.videocam_sharp,
-                size: 30,
-              ),
-              label: "Record"),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.save_sharp,
-                size: 30,
-              ),
-              label: "Saved"),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.settings,
-              size: 30,
+          selectedItemColor: Color(0xff042E2B),
+          unselectedItemColor: Color(0xFF939696),
+          showUnselectedLabels: true,
+          items: [
+            BottomNavigationBarItem(
+              icon: _currentIndex == 0
+                    ? Image.asset("assets/icons/Homeselect.png")
+                    : Image.asset("assets/icons/Home.png"),
+              label: "Home",
             ),
-            label: "Setting",
-          ),
-        ],
+            BottomNavigationBarItem(
+                icon: _currentIndex == 1
+                    ? Image.asset("assets/icons/searchselect.png")
+                    : Image.asset("assets/icons/Search.png"),
+                label: "Search"),
+            BottomNavigationBarItem(
+                icon: _currentIndex == 2
+                    ? Image.asset("assets/icons/Videoselect.png")
+                    : Image.asset("assets/icons/Video.png"),
+                label: "Record"),
+            BottomNavigationBarItem(
+                icon: _currentIndex == 3
+                    ? Image.asset("assets/icons/Bookmarkselect.png")
+                    : Image.asset("assets/icons/Bookmark.png"),
+                label: "Saved"),
+            BottomNavigationBarItem(
+              icon: _currentIndex == 4
+                    ? Image.asset("assets/icons/Settingselect.png")
+                    : Image.asset("assets/icons/Setting.png"),
+              label: "Setting",
+            ),
+          ],
+        ),
       ),
       body: _pages[_currentIndex],
     );

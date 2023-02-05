@@ -13,12 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Intern Flutter',
-      theme: ThemeData(
-        textTheme: GoogleFonts.interTextTheme()
-      ),
-      home: BottomNavController()
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Intern Flutter',
+        theme: ThemeData(textTheme: GoogleFonts.interTextTheme()),
+        home: BottomNavController());
   }
 }
